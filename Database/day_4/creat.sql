@@ -1,0 +1,10 @@
+INSERT INTO customers (name, age, city, country, customerNumber) VALUES ('seung-hyeop', 30, 'illsan', 'korea', 3333);
+INSERT INTO products (productsName, productCode, buyprice) VALUES ('Macbook', 's_33_3333', 2000000);
+INSERT INTO employees (employeeNumber, name, email) VALUES (29, 'seung-hyeop', 'tmdguq90051@gail.com');
+INSERT INTO offices (officeCode, country) VALUES (8, 'seoul');
+INSERT INTO oders (orderNumber, orderDate, customerNumber) VALUES (123, 2025-05-04, 3333);
+INSERT INTO orderdetails (orderNumber, productCode) VALUES (123, 's_33_3333');
+INSERT INTO payments (customerNumber, paymentDate) VALUES (3333, '2025-05-04');
+INSERT INTO productlines (productLine, textDescription) VALUES ('trains', 'oz_coding_school');
+INSERT INTO customers (name, age, city, country, customerNumber) VALUES ('parmer', 20, 'seoul', 'korea', 3334);
+INSERT INTO products (productsName, productCode, buyprice) VALUES ('Macbook-air', 's_33_3334', 1000000);
