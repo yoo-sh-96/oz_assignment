@@ -1,0 +1,10 @@
+DELETE FROM customers WHERE customerNumber = 103;
+DELETE FROM products WHERE productCode = 'S10_1678';
+DELETE FROM employees WHERE employeeNumber = 1022;
+DELETE FROM offices WHERE officeCode = 1;
+DELETE FROM orders WHERE orderNumber = 10100;
+DELETE FROM orderdetalis WHERE orderNumber = 10100;
+DELETE FROM payments WHERE checknumber = 'HQ336336';
+DELETE FROM productlines WHERE productLine = 'Classic Cars';
+DELETE FROM customers WHERE city = 'Las Vegas';
+DELETE FROM products WHERE productCode = 'S10_1678';

@@ -1,0 +1,10 @@
+SELECT * FROM customers;
+SELECT productCode FROM products;
+SELECT lastName, firstName, jobTitle FROM employees;
+SELECT city, country FROM offices;
+SELECT * FROM orders ORDER BY orderDate DESC LIMIT 10;
+SELECT * FROM orderdetails WHERE orderNumber = 10100;
+SELECT * FROM payments WHERE customerNumber = 103;
+SELECT productLine, textDescription FROM productlines;
+SELECT * FROM customers WHERE city = 'Nantes';
+SELECT * FROM products WHERE buyPrice >= 50;

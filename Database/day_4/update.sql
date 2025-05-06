@@ -1,0 +1,10 @@
+UPDATE customers SET addressLine1 = '5677 Strong St.' WHERE customerNumer = 103;
+UPDATE products SET buyPrice = 50 WHERE productCode = 's10_1678';
+UPDATE employees SET jobTitle = 'VP Sales' WHERE employeeNumber = 1076;
+UPDATE offices SET phone = '+1 650 219 4783' WHERE officeCode = 1;
+UPDATE oders SET status = 'Cancelled' WHERE oderNumber = 10100;
+UPDATE oderdetalis SET quantityOrdered = 49 WHERE orderNumber = 10100;
+UPDATE payments SET amount = 1234.56 WHERE checkNumber = 'HQ336336';
+UPDATE productlines SET textDescription = 'Fast' WHERE productLine = 'Planes';
+UPDATE customers SET email = 'tmdguq90051@gamail.com' WHERE customerNumber = 103;
+UPDATE products SET buyPrice = buyPrice * 1.5; 
