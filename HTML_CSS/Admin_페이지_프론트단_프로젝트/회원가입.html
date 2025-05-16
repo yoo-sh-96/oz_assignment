@@ -1,71 +1,153 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 양식</title>
-    <link rel="stylesheet" href="join.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>회원가입 양식</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* 🌙 다크모드 스타일 */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    body.dark-mode .form-control {
+      background-color: #2c2c2c;
+      color: #ffffff;
+      border-color: #444;
+    }
+
+    body.dark-mode .form-control::placeholder {
+      color: #aaaaaa;
+    }
+
+    body.dark-mode .form-label {
+      color: #dddddd;
+    }
+
+    body.dark-mode .btn-primary {
+      background-color: #444;
+      border-color: #666;
+    }
+
+    body.dark-mode .btn-primary:hover {
+      background-color: #666;
+      border-color: #888;
+    }
+
+    body.dark-mode .btn-toggle {
+      background-color: #444;
+      color: white;
+      border: none;
+    }
+  </style>
 </head>
 <body>
+  <div class="container mt-3 text-end">
+    <button class="btn btn-sm btn-outline-secondary" id="darkModeToggle">🌙 다크모드</button>
+  </div>
+  <div class="container mt-5">
+    <h2 class="mb-4">회원가입</h2>
+    <form id="signupForm" novalidate>
+      <div class="mb-3">
+        <label for="id" class="form-label">아이디</label>
+        <input type="text" class="form-control" id="id" name="id" placeholder="아이디를 입력하세요." required autocomplete="off">
+     </div>
 
-    <div id ="container">
-        <form id="form" action="#">
-            <table class="table">
-                <tr>
-                    <th>아이디</th>
-                    <td>
-                        <input name="id" placeholder="아이디를 입력하세요." autocomplete="off" required>
-                    </td>
-                </tr>
-                <tr>
-                    <th>비밀번호</th>
-                    <td>
-                        <input name="password1" type="password" placeholder="비밀번호를 입력하세요." required>
-                    </td>
-                </tr>
-                <tr>
-                    <th>비밀번호 확인</th>
-                    <td>
-                        <input name="password2" type="password" placeholder="비밀번호를 한번 더 입력하세요.">
-                    </td>
-                </tr>
-                <tr>
-                    <th>이름</th>
-                    <td>
-                        <input name="name" placeholder="사용자 이름" autocomplete="off" required>
-                    </td>
-                </tr>
-                <tr>
-                    <th>전화번호</th>
-                    <td>
-                        <input name="phone" placeholder="휴대전화 번호를 입력하세요" autocomplete="off" required>
-                    </td>
-                </tr>
-                <tr>
-                    <th>성별</th>
-                    <td>
-                        <label>
-                            <input type="radio" name="gender" value="male" checked> 남자
-                        </label>
-                        <label>
-                            <input type="radio" name="gender" value="female"> 여자
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <th>이메일</th>
-                    <td>
-                        <input title="정확한 메일 주소를 작성해주세요" type="email" name="email" autocomplete="off">
-                    </td>
-                </tr>
-            </table>
-            <div class="button">
-                <input type="submit" value="가입하기" class="btn" title="가입하기">
-            </div>
-        </form>
-    </div>
+      <div class="mb-3">
+        <label for="password1" class="form-label">비밀번호</label>
+        <input type="password" class="form-control" id="password1" name="password1" placeholder="비밀번호를 입력하세요." required>
+      </div>
 
-    <script src="join.js"></script>
+      <div class="mb-3">
+        <label for="password2" class="form-label">비밀번호 확인</label>
+        <input type="password" class="form-control" id="password2" name="password2" placeholder="비밀번호를 한번 더 입력하세요." required>
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">이름</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="사용자 이름" required autocomplete="off">
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">전화번호</label>
+        <input type="tel" class="form-control" id="phone" name="phone" placeholder="휴대전화 번호를 입력하세요" required autocomplete="off">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label d-block">성별</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderMale" value="남자" checked>
+          <label class="form-check-label" for="genderMale">남자</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="여자">
+          <label class="form-check-label" for="genderFemale">여자</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">이메일</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="이메일 주소를 입력하세요" autocomplete="off">
+      </div>
+
+      <button type="submit" class="btn btn-primary">가입하기</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById("darkModeToggle").addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+      const btn = document.getElementById("darkModeToggle");
+      btn.textContent = document.body.classList.contains("dark-mode") ? "☀️ 라이트모드" : "🌙 다크모드";
+    });
+
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const id = document.getElementById("id").value.trim();
+      const password1 = document.getElementById("password1").value;
+      const password2 = document.getElementById("password2").value;
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const gender = document.querySelector("input[name='gender']:checked").value;
+
+      // 아이디 유효성 검사: 영문+숫자 포함, 7자리 이상
+      const idRegex = /^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d]{7,}$/;
+      if (!idRegex.test(id)) {
+        alert("아이디는 영문과 숫자를 포함하며 7자리 이상이어야 합니다.");
+        return;
+      }
+
+      // 비밀번호 유효성 검사: 영문+숫자+특수문자 포함, 9자리 이상
+      const pwRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{9,}$/; 
+      if (!pwRegex.test(password1)) {
+        alert("비밀번호는 영문자, 숫자, 특수문자를 포함하고 9자리 이상이어야 합니다.");
+        return;
+      }
+
+      // 비밀번호 확인 일치 검사
+      if (password1 !== password2) {
+        alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
+        return;
+      }
+
+      alert(
+        "회원가입 정보 확인:\n" +
+        `아이디: ${id}\n` +
+        `이름: ${name}\n` +
+        `전화번호: ${phone}\n` +
+        `성별: ${gender}\n` +
+        `이메일: ${email}`
+      );
+
+      this.reset();
+
+      window.location.href = 'admin_project.html';
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
