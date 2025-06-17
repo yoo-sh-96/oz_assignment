@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b6baea6-37a2-4495-aaaf-75b2f193b146" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/config/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/config/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/config/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/config/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/poetry.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OZ_DJANGO/pyproject.toml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2ycg59GcweAqZioGMOIm728dcnh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="6b6baea6-37a2-4495-aaaf-75b2f193b146" name="변경" comment="" />
+      <created>1750139091234</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750139091234</updated>
+      <workItem from="1750139092044" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
