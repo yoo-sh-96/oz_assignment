@@ -172,3 +172,4 @@
 ---
 
 #  ORM 실습
+<img width="1504" alt="Image" src="https://github.com/user-attachments/assets/e84bc6f0-bc15-425c-a788-6e333f04af1f" />
