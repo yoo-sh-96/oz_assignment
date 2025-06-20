@@ -1,12 +1,30 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.exceptions import NotFound
+from .models import Feed
+from .serializers import FeedSerializer
 
-# Create your views here.
-def show_feed(request):
-    return HttpResponse("show feed")
+class Feeds(APIView):
+    # 전체 게시글 조회
+    def get(self, request):
+        feeds = Feed.objects.all() # 객체
 
-def one_feed(request, feed_id, feed_content):
-    return HttpResponse(f"feed_id : {feed_id}, feed_content : {feed_content}")
+        # 객체 -> JSON (시리얼 라이즈)
+        serializer = FeedSerializer(feeds, many=True)
 
-def all_feed(request):
-    return HttpResponse("all feed")
+        return Response(serializer.data)
+    
+class FeedDetail(APIView):
+    def get_object(self, feed_id):
+        try:
+            return Feed.objects.get(id=feed_id)
+        except Feed.DoesNotExist:
+            raise NotFound
+    
+    def get(self, request, feed_id):
+        feed = self.get_object(feed_id)
+
+        serializer = FeedSerializer(feed)
+
+        return Response(serializer.data)
