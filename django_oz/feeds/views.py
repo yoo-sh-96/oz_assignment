@@ -15,6 +15,19 @@ class Feeds(APIView):
 
         return Response(serializer.data)
     
+    def post(self, request):
+        # 역직렬화 (클라이언트가 보내준 json -> object)
+        serializer = FeedSerializer(data=request.data)
+
+        if serializer.is_valid():
+            feed = serializer.save(user=request.user)
+
+            serializer = FeedSerializer(feed)
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors)
+
+    
 class FeedDetail(APIView):
     def get_object(self, feed_id):
         try:
